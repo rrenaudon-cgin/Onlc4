@@ -16,6 +16,9 @@ import * as Multilang from './Multilang';
  */
 
 export interface Controller {
+  readonly setAutoActivation: (enabled: boolean) => void;
+  readonly showFor: (node: Node | null) => void;
+  readonly hide: () => void;
   readonly isEnabled: () => boolean;
   readonly enable: () => void;
   readonly disable: () => void;
@@ -28,6 +31,7 @@ export interface Controller {
 
 const setup = (editor: Editor): Controller => {
   let enabled = Options.isEnabled(editor);
+  let autoActivation = true;
   let overlay: Overlay.Overlay | null = null;
 
   const getOverlay = (): Overlay.Overlay => {
@@ -134,11 +138,11 @@ const setup = (editor: Editor): Controller => {
   const bindEvents = () => {
     editor.on('mouseover', (e) => {
       overUi = Blocks.isUi(editor, e.target as Node);
-      showFor(e.target as Node);
+      if (autoActivation) { showFor(e.target as Node); }
     });
     // Le curseur ne commande l'overlay que si le pointeur n'a pas déjà la main.
     editor.on('NodeChange', (e) => {
-      if (!overUi) {
+      if (autoActivation && !overUi) {
         showFor(e.element);
       }
     });
@@ -179,6 +183,9 @@ const setup = (editor: Editor): Controller => {
   };
 
   return {
+    setAutoActivation: (value) => { autoActivation = value; },
+    showFor,
+    hide: () => { if (Type.isNonNullable(overlay)) { overlay.hide(); } },
     isEnabled: () => enabled,
     enable,
     disable,

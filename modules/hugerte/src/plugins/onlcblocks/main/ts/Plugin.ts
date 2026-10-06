@@ -27,6 +27,9 @@ import * as PropertiesDialog from './ui/PropertiesDialog';
  */
 
 export interface OnlcBlocksApi {
+  readonly setAutoActivation: (enabled: boolean) => void;
+  readonly showFor: (node: Node | null) => void;
+  readonly hide: () => void;
   readonly isEnabled: () => boolean;
   readonly toggle: () => void;
   readonly getActiveBlock: () => Optional<HTMLElement>;
@@ -157,6 +160,9 @@ export default (): void => {
     Buttons.register(editor, controller);
 
     return {
+      setAutoActivation: (value) => controller.setAutoActivation(value),
+      showFor: (node) => controller.showFor(node),
+      hide: () => controller.hide(),
       isEnabled: () => controller.isEnabled(),
       toggle: () => controller.toggle(),
       getActiveBlock: () => controller.getActive(),
