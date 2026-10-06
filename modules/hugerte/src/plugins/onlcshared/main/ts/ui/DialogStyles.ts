@@ -1,3 +1,4 @@
+import { dialogLayout } from './DialogLayout';
 import { Type } from '@ephox/katamari';
 
 import Editor from 'hugerte/core/api/Editor';
@@ -102,7 +103,7 @@ const styles =
   ' padding: 1px 5px; font-family: SFMono-Regular, Menlo, Consolas, monospace; font-size: .92em;' +
   ` background: rgba(34, 47, 62, .06); border-radius: 4px; color: ${ink}; }` +
   tabs +
-  closeButton;
+  closeButton + dialogLayout;
 
 /**
  * Injecte la feuille dans le document de l'interface, une seule fois par page. Appelée par
