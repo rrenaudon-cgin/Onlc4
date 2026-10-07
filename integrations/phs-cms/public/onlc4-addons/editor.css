@@ -1,0 +1,97 @@
+/* Editor-only: legacy site CSS must not style or cover Onlc4 controls. */
+body.onlc-blocks-enabled > .onlc-blocks-ui {
+  position: absolute !important;
+  inset: 0 auto auto 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 2147483647 !important;
+  pointer-events: none;
+  font: 13px/1 system-ui, sans-serif !important;
+  text-align: left !important;
+}
+body.onlc-blocks-enabled .onlc-blocks-toolbar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 2px !important;
+  width: max-content !important;
+  max-width: calc(100vw - 16px) !important;
+  margin: 0 !important;
+  padding: 4px !important;
+  background: #fff !important;
+  border: 1px solid #bac6d5 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 3px 12px #17203333 !important;
+  pointer-events: auto;
+}
+/* Onlc4 leaves 2px below the toolbar. Keep that passage inside its hover
+   target so the controls do not disappear while the pointer crosses it. */
+body.onlc-blocks-enabled .onlc-blocks-toolbar::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: -1px;
+  height: 4px;
+  pointer-events: auto;
+}
+body.onlc-blocks-enabled .onlc-blocks-toolbar__props {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+}
+body.onlc-blocks-enabled .onlc-blocks-btn {
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  flex: 0 0 44px !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font: 600 20px/1 system-ui, sans-serif !important;
+  color: #172033 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  float: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  pointer-events: auto;
+}
+body.onlc-blocks-enabled .onlc-blocks-btn:hover,
+body.onlc-blocks-enabled .onlc-blocks-btn:focus-visible { background: #eaf1fb !important; }
+body.onlc-blocks-enabled .onlc-blocks-btn:focus-visible { outline: 2px solid #006ce7 !important; }
+body.onlc-blocks-enabled .onlc-blocks-add,
+body.onlc-blocks-enabled .onlc-blocks-langmenu { pointer-events: auto; }
+body.onlc-blocks-enabled .onlc-blocks-hidden { display: none !important; }
+
+/* Badges belong to the toolbar, never to the editable text. */
+body.onlc-blocks-enabled .onlc-blocks-toolbar .onlc-blocks-outline__kind,
+body.onlc-blocks-enabled .onlc-blocks-toolbar .onlc-blocks-outline__id {
+  position: static !important; display: inline-flex; align-items: center; justify-content: center;
+  flex: 0 0 auto; width: auto; min-width: 24px; height: 28px; margin: 0 4px; padding: 2px;
+  background: transparent; border: 0; color: #526174; font: 12px/1.2 system-ui,sans-serif;
+}
+body.onlc-blocks-enabled .onlc-blocks-toolbar .onlc-blocks-outline__kind svg { width: 18px; height: 18px; }
+
+/* Insert buttons stay inside the coordinated palette; vendor top/left offsets
+   must never put them back over text or images. No hover scale overflow. */
+body.onlc-blocks-enabled .onlc-blocks-toolbar .onlc-blocks-add {
+  position: static !important; inset: auto !important; flex: 0 0 28px !important;
+  width: 28px !important; height: 28px !important; min-width: 28px !important;
+  margin: 0 2px !important; transform: none !important; opacity: 1 !important;
+}
+body.onlc-blocks-enabled .onlc-blocks-toolbar .onlc-blocks-add svg { width:14px !important; height:14px !important; }
+/* Avoid a transient overlay before the coordinator creates the footer copy. */
+body.onlc-blocks-enabled > .onlc-blocks-ui .onlc-blocks-add { visibility:hidden !important; }
+
+body.onlc-blocks-enabled > .onlc-blocks-ui .onlc-blocks-toolbar,
+body.onlc-blocks-enabled > .onlc-blocks-ui .onlc-blocks-langmenu,
+body.onlc-blocks-enabled > .onlc-blocks-ui .onlc-blocks-outline__kind,
+body.onlc-blocks-enabled > .onlc-blocks-ui .onlc-blocks-outline__id { visibility:hidden !important; }

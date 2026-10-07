@@ -1,0 +1,36 @@
+/* Both contextual palettes share the same visual language and target size. */
+.tox.tox-silver-sink .tox-pop{border:1px solid #bac6d5;border-radius:6px;background:#fff;box-shadow:0 3px 12px #17203333}
+.tox.tox-silver-sink .tox-pop .tox-tbtn{width:44px;height:44px;border-radius:4px;color:#172033;background:transparent}
+.tox.tox-silver-sink .tox-pop .tox-tbtn:hover{background:#eaf1fb}
+.tox.tox-silver-sink .tox-pop .tox-toolbar{padding:4px;background:#fff}
+.tox .cms-context-dock{display:none;flex:0 0 auto;box-sizing:border-box;gap:6px;padding:6px;background:#f3f6f9;border-bottom:1px solid #bac6d5;position:sticky;top:0;z-index:2;flex-wrap:wrap}
+.tox .cms-context-dock--active{display:flex}
+.tox .cms-block-palette{display:flex;flex-wrap:wrap;align-items:center;gap:2px;padding:4px;max-width:100%;background:#fff;border:1px solid #bac6d5;border-radius:6px;box-shadow:0 3px 12px #17203333}
+.tox .cms-block-palette .onlc-blocks-btn{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:44px;height:44px;flex:0 0 44px;background:transparent;border:0;border-radius:4px;color:#172033;font:600 20px/1 system-ui;cursor:pointer}
+.tox .cms-block-palette .onlc-blocks-btn:hover{background:#eaf1fb}.tox .cms-block-palette .onlc-blocks-btn:disabled{opacity:.35;cursor:default}.tox .cms-block-palette .onlc-blocks-toolbar__props{display:flex;flex-wrap:wrap}
+.tox .cms-block-palette .onlc-blocks-outline__kind,.tox .cms-block-palette .onlc-blocks-outline__id{display:inline-flex;align-items:center;justify-content:center;position:static;min-width:24px;height:28px;margin:0 4px;padding:2px;color:#526174;font:12px/1.2 system-ui;background:transparent;border:0}.tox .cms-block-palette .onlc-blocks-outline__kind svg{width:18px;height:18px}.tox .cms-block-palette .onlc-blocks-hidden{display:none!important}
+.cms-block-source{width:min(1100px,100%)}
+.tox.tox-silver-sink .tox-pop::before,.tox.tox-silver-sink .tox-pop::after{display:none}
+.tox .cms-context-dock>div{min-width:0;max-width:100%}
+.tox.tox-silver-sink .tox-pop .tox-toolbar{flex-wrap:wrap;max-width:100%;box-sizing:border-box}
+.tox.tox-silver-sink .tox-pop .tox-toolbar__group{flex-wrap:wrap}
+.tox .cms-block-palette .onlc-blocks-btn:focus-visible,.tox.tox-silver-sink .tox-pop .tox-tbtn:focus-visible{outline:2px solid #006ce7;outline-offset:-2px}
+.cms-spelling-status{font:13px/1.5 system-ui;color:#526174;margin:8px 0 0}
+/* Keep the body scroll inside the bounded editor; its toolbar remains visible. */
+.content-admin__rich-editor>.tox:not(.tox-fullscreen){max-height:calc(100dvh - 105px);min-height:300px}
+
+/* Compact insert controls in reserved chrome, outside the editable iframe. */
+.tox .cms-block-palette .onlc-blocks-add { position:static!important;inset:auto!important;display:inline-flex;align-items:center;justify-content:center;flex:0 0 28px;width:28px;height:28px;margin:0 2px;padding:0;border:1px solid #bac6d5;border-radius:5px;background:#eaf1fb;color:#006ce7;cursor:pointer;transform:none!important;visibility:visible!important; }
+.tox .cms-block-palette .onlc-blocks-add svg { width:14px;height:14px; }
+.tox .cms-block-palette .onlc-blocks-add:focus-visible { outline:2px solid #006ce7;outline-offset:2px; }
+.tox .cms-block-language { display:flex;flex-wrap:wrap;gap:4px;align-items:center;padding:4px;background:#fff;border:1px solid #bac6d5;border-radius:6px; }
+.tox .cms-block-language button { padding:6px 10px;border:0;border-radius:4px;background:#eaf1fb;color:#172033;font:inherit;cursor:pointer; }
+.tox .cms-block-language .onlc-blocks-langitem--current { color:#fff;background:#006ce7; }
+.tox .cms-block-language button:focus-visible { outline:2px solid #006ce7; }
+
+/* Floating palettes use viewport coordinates; their wrapper occupies no space. */
+.tox .cms-context-dock { position:static; }
+.tox .cms-context-dock--floating { display:block;position:absolute;width:0;height:0;padding:0;border:0;background:transparent;pointer-events:none;overflow:visible;z-index:1200; }
+.tox .cms-context-dock--floating>div { width:max-content;max-width:none;pointer-events:auto;z-index:1200; }
+.tox .cms-context-dock--floating .cms-block-palette { width:max-content;max-width:100%; }
+.tox .cms-context-dock--floating .cms-block-language { width:max-content;max-width:100%; }

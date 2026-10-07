@@ -1,0 +1,16 @@
+{
+  "format": "phs-onlc-addons/v1",
+  "engineCommit": "8761d3cae2a54ed5387f7800f27bbc2c3e28a6bc",
+  "files": {
+    "README.md": "92b882236a920df1d3c48f09d1e49c4345c13d92631e090c5da0f9d7e87052df",
+    "public/onlc-cms-shortcodes.js": "e4bf210d05ee31e814d6284a218cdb030a36381fc3dddbae7a9230105f3e9dc0",
+    "public/onlc4-addons/editor.css": "532ab645e2b84ef5904a3dff7730658568a8470d54bf35482cd3f9689b63fb61",
+    "public/onlc4-addons/languagetool.js": "ed36cd4f40af509b948b22d2cf75695892b00ba34b42e4830d1fb06f9b08bf79",
+    "public/onlc4-addons/selection.js": "f576b384719261a3de2a2de41a8d0b18130f198420201f505777ee48f417d5bd",
+    "src/CmsRichEditor.tsx": "f8b44bee07ba5e132f582d356fa8ff32b6d0210f9afa609334324a8ddd842687",
+    "src/blockTools.ts": "d9b0f608642839ff54fa3ad9374f2347829b17bb38ca3cea31ba13fc0ea0867b",
+    "src/editorStyles.ts": "504a9fc66f3a613a71e6febd4f28792d6e3f1409a8e02b2e23f28ab42ea4fd41",
+    "src/loader.ts": "7abd6dfc4f5a3b13a4dcac7d464d33e9c0fbc895a24f458a594f0454541d2e8a",
+    "src/ui.css": "30820b07b2101e42fc02d583567c626c8ef964010155d7ce34fd5c18fef530d0"
+  }
+}
